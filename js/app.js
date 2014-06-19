@@ -75,6 +75,13 @@ function setupFormValidation() {
         messages: {
             inputX: "Please enter an integer for X",
             inputY: "Please enter an integer for Y"
+        },
+        highlight: function (element) {
+            $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function (element) {
+            element
+            .closest('.form-group').removeClass('has-error');
         }
     });
 }

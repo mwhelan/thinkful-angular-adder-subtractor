@@ -12,28 +12,8 @@ $(document).ready(function() {
     });
 
     $("button").on("click", function(event) {
-        //event.preventDefault();
         calculate(event.target.name);
-        //calculate($(this).name);
     });
-
-    //$("#plus").click(function (event) {
-    //    //event.preventDefault();
-    //    //var calculator = createCalculator();
-    //    //var result = calculator.add();
-    //    //var message = "X plus Y is " + result;
-    //    //$("#result").text(message);
-    //    calculate(event, "plus");
-    //});
-
-    //$("#minus").click(function (event) {
-    //    //event.preventDefault();
-    //    //var calculator = createCalculator();
-    //    //var result = calculator.subtract();
-    //    //var message = "X minus Y is " + result;
-    //    //$("#result").text(message);
-    //    calculate(event, "minus");
-    //});
 });
 
 function Calculator(x, y) {
@@ -80,8 +60,7 @@ function setupFormValidation() {
             $(element).closest('.form-group').addClass('has-error');
         },
         unhighlight: function (element) {
-            element
-            .closest('.form-group').removeClass('has-error');
+            $(element).closest('.form-group').removeClass('has-error');
         }
     });
 }

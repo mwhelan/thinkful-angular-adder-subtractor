@@ -6,13 +6,10 @@ $(document).ready(function() {
     setupFormValidation();
     $("#inputX").focus();
 
-    $("#convertForm").submit(function (event) {
-        // need this for validation to work.
-        event.preventDefault();
-    });
-
-    $("button").on("click", function(event) {
-        calculate(event.target.name);
+    $("button").on("click", function (event) {
+        if (("#convertForm").valid()) {
+            calculate(event.target.name);
+        }
     });
 });
 
